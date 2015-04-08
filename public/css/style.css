@@ -1,0 +1,32 @@
+body {
+  padding: 4em;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+}
+ul.weather {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul.weather li {
+  float: left;
+  width: 15em;
+  height: 10em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: #eee;
+}
+dl {
+  margin: 0;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+}

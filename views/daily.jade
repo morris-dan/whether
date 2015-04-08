@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1 #{title} for #{capitalise_helper(city)} on #{capitalise_helper(dayOfWeek)}
+    dl 
+        dt Geogrpahical co-ordinates:
+        dd !{lat_lng_helper(coords.lat, coords.lng)}
+        dt Date:
+        dd #{date_helper(data.time)}
+        dt Temp:
+        dd #{temp_helper('C', data.temperatureMax)}
+        dt Summary:
+        dd #{data.summary}
