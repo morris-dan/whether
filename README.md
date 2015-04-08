@@ -43,6 +43,11 @@ $ cd whether
 $ npm install
 ```
 
+Put your Dark Sky API key into config.js.
+```
+config.apiKey = process.env.FORECAST_IO_APIKEY || '<add secret api key here>';
+```
+
 Run whether using:
 
 ```bash
@@ -70,7 +75,8 @@ Use your browser or curl to hit the endpoints listed below in the examples once 
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-0.1.0 Initial commit of app to the wide world
+0.1.0 Initial commit of app to the wide world.
+0.1.1 Error handling fix.
 
 ## License
 Copyright (c) 2015 Dan Morris  

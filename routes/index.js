@@ -34,13 +34,14 @@ router.get('/weather/:city', function(req, res, next) {
         function(err, response, body) {
 
             if (err) {
-                console.log('error getting forecast : http%i', response.statusCode);
+                console.log('error getting city forecast : http status: ' + response.statusCode);
+                return next(err);
             }
             else {
 
                 var responseData = JSON.parse(body);
 
-                console.log('success getting forecast : http%i', response.statusCode);
+                console.log('success getting forecast : http status: ' + response.statusCode);
 
                 if(/text\/html/.test(req.get('accept'))) {
                     // html response
@@ -79,7 +80,8 @@ router.get('/weather/:city/:dayOfWeek', function(req, res, next) {
         function(err, response, body) {
 
             if (err) {
-                console.log('error getting forecast for s% : http%i', req.params.dayOfWeek, response.statusCode);
+                console.log('error getting city day forecast for ' + req.params.dayOfWeek + ' : http status: ' + response.statusCode );
+                return next(err);
             }
             else {
 
@@ -104,7 +106,7 @@ router.get('/weather/:city/:dayOfWeek', function(req, res, next) {
 
                 }
 
-                console.log('success getting forecast for %s : http%i', req.params.dayOfWeek, response.statusCode);
+                console.log('success getting forecast for ' + req.params.dayOfWeek + ' : http status: ' + response.statusCode);
 
                 if(/text\/html/.test(req.get('accept'))) {
                     // html response
