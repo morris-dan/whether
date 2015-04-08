@@ -7,6 +7,12 @@ describe('darksky', function () {
 
     describe('.getData() throws error when incorrectly initialised', function () {
 
+        it('throws as error when the api key has not been set', function() {
+
+            expect(config.apiKey).to.not.equal('<add secret api key here>');
+
+        });
+
         it('throws an error when options are empty', function(){
 
             var forecast = new darksky();
@@ -39,7 +45,7 @@ describe('darksky', function () {
 
         var options = {
             apiUrl: config.dataUrl,
-            apiKey: 'apikey',
+            apiKey: 'testapikey',
             lat: -45, 
             lng: 90, 
             units: 'si'
@@ -49,7 +55,7 @@ describe('darksky', function () {
 
             // nock up the expected json response
             nock('https://api.forecast.io')
-                .get('/forecast/apikey/-45,90?units=si')
+                .get('/forecast/testapikey/-45,90?units=si')
                 .replyWithFile(201, __dirname + '/../public/data/sydney.json');
 
         });
