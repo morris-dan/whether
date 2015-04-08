@@ -1,6 +1,8 @@
 {
-  "name": "whether-1",
-  "version": "0.0.1",
+  "name": "whether",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Dan Morris",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"

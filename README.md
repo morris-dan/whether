@@ -35,10 +35,10 @@ Scaffolding generated via `sudo npm install -g generator-express` and `yo expres
 Details @ https://github.com/petecoop/generator-express
 
 ## Getting Started
-Install whether by cloning repo https://github.com/danmorris/whether.
+Install whether by cloning repo https://github.com/morris-dan/whether.
 
 ```bash
-$ git clone https://github.com/danmorris/whether
+$ git clone https://github.com/morris-dan/whether
 $ cd whether
 $ npm install
 ```
